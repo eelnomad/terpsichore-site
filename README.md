@@ -1,4 +1,4 @@
-# calliope-site
+# terpsichore-site
 
 The promo and compliance site for **Calliope**, the rhythm trainer for dancers
 (app source: [`eelnomad/calliope`](https://github.com/eelnomad/calliope)).
@@ -37,7 +37,7 @@ assets/
   css/fonts.css           # @font-face for the three bundled families
   css/site.css            # layout + components
   fonts/                  # Instrument Serif, Space Grotesk, Space Mono (copied from the app)
-  calliope-mark.svg  favicon.png  og-image.png  icon-512.webp  icon-192.webp
+  terpsichore-mark.svg  favicon.png  og-image.png  icon-512.webp  icon-192.webp
   screenshots/            # drop screenshots here — see its README
 ```
 
@@ -62,12 +62,12 @@ The directory is not yet a git repository. To publish:
 git init -b main
 git add .
 git commit -m "Calliope promo site"
-gh repo create calliope-site --public --source=. --push
+gh repo create terpsichore-site --public --source=. --push
 ```
 
 Then in the repo: **Settings → Pages → Build and deployment → Deploy from a branch**, branch
 `main`, folder `/ (root)`. The site appears at
-<https://eelnomad.github.io/calliope-site/> within a minute or two.
+<https://eelnomad.github.io/terpsichore-site/> within a minute or two.
 
 `.nojekyll` matters — without it Pages runs the files through Jekyll, which ignores paths
 beginning with an underscore and can mangle assets.
@@ -80,7 +80,7 @@ Three things change:
    placeholder value** — a `CNAME` pointing at a domain you don't control breaks the deploy.
 2. Update the absolute URLs — `<link rel="canonical">`, `og:url`, `og:image`, `twitter:image` —
    in `index.html`, `privacy.html`, and `support.html`, plus `robots.txt` and `sitemap.xml`.
-3. Strip the `/calliope-site/` prefix from the paths in `404.html`. That page uses root-absolute
+3. Strip the `/terpsichore-site/` prefix from the paths in `404.html`. That page uses root-absolute
    paths deliberately (Pages serves it for unknown URLs at any depth, where relative paths would
    resolve against the missing path); every other page uses relative paths and needs no change.
 

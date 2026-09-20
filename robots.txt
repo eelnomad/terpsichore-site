@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eelnomad.github.io/calliope-site/sitemap.xml
+Sitemap: https://eelnomad.github.io/terpsichore-site/sitemap.xml
